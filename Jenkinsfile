@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'ANSIBLE'
+    }
 
     environment {
         ENV_URL = "pipeline.global.com"        // Declaring at pipeline will allow all the stages to allow this variable
@@ -29,7 +31,7 @@ pipeline {
         stages{
         stage('One') {
             when { 
-        branch 'develop'
+                environment name: 'CHOICE', value: 'one' 
          }
     
             steps {
