@@ -1,14 +1,22 @@
 pipeline {
     agent any
+
+    environment {
+        ENV_URL = "pipeline.global.com"        // Declaring at pipeline will allow all the stages to allow this variable
+    }
     stages{
         stage('One') {
             steps {
                 echo "I am Stage One Step"
+                echo "ENV_URL is ${ENV_URL}"
             }
         }
         stage('Two') {
+             environment {
+                ENV_URL = "stage2.global.com"
             steps {
                 echo "I am Stage Two Step"
+                echo "ENV_URL is ${ENV_URL}"
             }
         }
         stage('Three') {
