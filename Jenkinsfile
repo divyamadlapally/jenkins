@@ -14,6 +14,9 @@ pipeline {
         stage('Three') {
             steps {
                 echo "I am Stage Three Step"
+                sh '''Hai world
+                      Hello world
+                      I am using pipeline syntax generator'''
             }
         }
     }
