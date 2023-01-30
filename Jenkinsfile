@@ -26,11 +26,7 @@ pipeline {
         maven 'mvn 387' 
     }
      
-    when { 
-        branch 'develop'
-         }
-    
-    stages{
+        stages{
         stage('One') {
             when { 
         branch 'develop'
