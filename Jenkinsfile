@@ -13,10 +13,10 @@ pipeline {
         }
         stage('Three') {
             steps {
-                echo "I am Stage Three Step"
-                sh '''Hai world
-                      Hello world
-                      I am using pipeline syntax generator'''
+                sh '''
+                echo Hai world
+                echo Hello world
+                echo I am using pipeline syntax generator'''
             }
         }
     }
