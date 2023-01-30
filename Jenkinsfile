@@ -25,6 +25,9 @@ pipeline {
     tools {
         maven 'mvn 387' 
     }
+     when { 
+        branch 'develop'
+         }
     
     stages{
         stage('One') {
