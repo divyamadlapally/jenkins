@@ -23,7 +23,7 @@ pipeline {
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
     tools {
-        maven 'maven-381' 
+        maven 'mvn-381' 
     }
     
     stages{
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 echo "I am Stage One Step"
                 echo "ENV_URL is ${ENV_URL}"   // Declaring at stage will allow only that stage to access the variable
-                sh "maven --version"
+                sh "mvn --version"
             }
 
         }
