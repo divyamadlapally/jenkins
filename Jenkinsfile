@@ -28,7 +28,7 @@ pipeline {
             steps {
                 echo "I am Stage One Step"
                 echo "ENV_URL is ${ENV_URL}"   // Declaring at stage will allow only that stage to access the variable
-            
+                sleep 10
             }
 
         }
