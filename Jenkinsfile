@@ -25,7 +25,8 @@ pipeline {
     tools {
         maven 'mvn 387' 
     }
-     when { 
+     
+    when { 
         branch 'develop'
          }
     
