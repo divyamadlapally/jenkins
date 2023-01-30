@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         ENV_URL = "pipeline.global.com"        // Declaring at pipeline will allow all the stages to allow this variable
+        SSH_CRED = credentials ('SSH_CRED')
     }
     stages{
         stage('One') {
