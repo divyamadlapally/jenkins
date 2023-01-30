@@ -26,6 +26,7 @@ pipeline {
                 echo Hai world
                 echo Hello world
                 echo I am using pipeline syntax generator'''
+                env
             }
         }
     }
