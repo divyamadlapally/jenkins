@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'ANSIBLE'
+        label 'JENKINS'
     }
 
     environment {
